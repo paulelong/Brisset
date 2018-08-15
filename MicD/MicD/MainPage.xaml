@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MicD"
+             x:Class="MicD.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Slider HorizontalOptions="Center"/>
+        <Button Text="Scan" Clicked="ScanClicked"/>
+        <Button Text="Connect" Clicked="ConnectClicked"/>
+        <Button Text="Disconnect" Clicked="DisconnectClicked"/>
+        <Button Text="Motor A pos1" Clicked="MotorAOn"/>
+        <Button Text="Motor A pos2" Clicked="MotorAOff"/>
+        <Button Text="All off" Clicked="AllMotorOff"/>
+        
+    </StackLayout>
+
+</ContentPage>
