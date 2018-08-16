@@ -10,6 +10,6 @@ namespace MicD
         void Connect(string device);
         void Disconnect();
         Task<uint> Send(string data);
-        bool Recieve(string data);
+        string Recieve();
     }
 }

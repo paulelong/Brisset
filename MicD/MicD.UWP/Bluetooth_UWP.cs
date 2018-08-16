@@ -10,6 +10,9 @@ using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
 using Xamarin.Forms;
 using MicD.UWP;
+using Windows.Devices.Bluetooth;
+
+//using Windows.Devices.Bluetooth.Rfcomm;
 
 [assembly: Dependency(typeof(Bluetooth_UWP))]
 namespace MicD.UWP
@@ -69,9 +72,10 @@ namespace MicD.UWP
             }
         }
 
-        public bool Recieve(string data)
+        public string Recieve()
         {
             throw new NotImplementedException();
+            return "";
         }
 
         public async Task<uint> Send(string msg)

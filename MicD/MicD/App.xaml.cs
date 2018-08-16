@@ -8,11 +8,11 @@ namespace MicD
 {
 	public partial class App : Application
 	{
-		public App (IBluetoothLowEnergyAdapter ble)
+		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage(ble);
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()
