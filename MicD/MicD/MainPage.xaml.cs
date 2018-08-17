@@ -81,10 +81,16 @@ namespace MicD
 
         private void SliderValChanged(object sender, ValueChangedEventArgs e)
         {
-            double val = e.NewValue * 255;
-            var valStr = Encoding.Default.GetString(new byte[] { (byte)val });
+            double val = e.NewValue * 0x4000;
+            int p = (int)val;
+            int p2 = p >> 7;
+            p &= 0x7F;
+
+            var c = Encoding.Default.GetString(new byte[] { (byte)p });
+            var c2 = Encoding.Default.GetString(new byte[] { (byte)p2 });
             Debug.Print("slider val is {0}", val);
-            string command = string.Format("2{0}", valStr);
+            string command = string.Format("2{0}{1}", c, c2);
+            dbg.Text = val.ToString() + " c=" + command;
             DependencyService.Get<IBluetooth>().Send(command);
         }
     }

@@ -13,6 +13,7 @@
         <Button Text="Motor A pos2" Clicked="MotorAOff"/>
         <Button Text="All off" Clicked="AllMotorOff"/>
         <Slider HorizontalOptions="FillAndExpand" ValueChanged="SliderValChanged"/>
+        <Label x:Name="dbg" HorizontalOptions="StartAndExpand"/>
     </StackLayout>
 
 </ContentPage>
