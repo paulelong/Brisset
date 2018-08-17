@@ -27,7 +27,7 @@ namespace MicD.Droid
         {
             BluetoothAdapter adapter = BluetoothAdapter.DefaultAdapter;
 
-            BluetoothDevice device = (from bd in adapter.BondedDevices where bd.Name == deviceName select bd).FirstOrDefault();
+            BluetoothDevice device = (from bd in adapter.BondedDevices where bd.Name == "HC-06" select bd).FirstOrDefault();
 
             if (device == null)
             {

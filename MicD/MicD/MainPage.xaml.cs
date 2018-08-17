@@ -78,5 +78,14 @@ namespace MicD
         {
             DependencyService.Get<IBluetooth>().Disconnect();
         }
+
+        private void SliderValChanged(object sender, ValueChangedEventArgs e)
+        {
+            double val = e.NewValue * 255;
+            var valStr = Encoding.Default.GetString(new byte[] { (byte)val });
+            Debug.Print("slider val is {0}", val);
+            string command = string.Format("2{0}", valStr);
+            DependencyService.Get<IBluetooth>().Send(command);
+        }
     }
 }

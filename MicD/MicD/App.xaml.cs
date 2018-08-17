@@ -1,7 +1,6 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using nexus.protocols.ble;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace MicD
